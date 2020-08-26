@@ -56,10 +56,10 @@ Code to both encrypt and decrypt an AES-ECB ciphertext in CBC mode.
 - The decryption process first AES-ECB decrypts the ciphertext chunks and afterwards does the reverse process with the XOR'ing.
 - Padded is added and stripped when needed.
 
--[x] [11. ECB/CBC Oracle](BlockCrypto/ECBCBCOracle.py):
+- [x] [11. ECB/CBC Oracle](BlockCrypto/ECBCBCOracle.py):
 An Oracle which encrypts plaintext in ECB or CBC with 50/50 probability. Key is randomly generated through the operating system.
 
--[x] [12. Byte-at-a-time ECB Decryption](ByteECBDecrypt.py):
+- [x] [12. Byte-at-a-time ECB Decryption](ByteECBDecrypt.py):
 Code to break the Oracle when it chooses ECB mode given a fixed random key (globally assigned) and appending a base-64 encoded string (presumed to the unknown) to the plaintext.
 - Infered a function to decide the block size of the cipher (it is known to be 16, but generally it can be 16, 24 or 32) and a function to decide if the ciphertext is ECB encrypted.
 - We feed the character "B" to the oracle repeatedly, first "B", then "BB", etc. 
