@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Hex to Decimal conversion
+Hex to Base-64 conversion
 
 Mikkel Højlund Larsen
 """
 import base64
 
 def hexTo64(hexstring:str):
-    hex_data = bytearray.fromhex(hexstring)
+    hex_data = bytes.fromhex(hexstring)
     b64string = base64.b64encode(hex_data)
     print(b64string)
     return b64string
